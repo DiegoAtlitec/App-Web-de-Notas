@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Notas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Gestión de Notas</h2>
+        <form action="http://localhost:9999" method="get">
+            <fieldset>
+                <legend>Información de la Nota</legend>
+
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria">
+                    <optgroup label="Académico">
+                        <option value="tarea">Tarea</option>
+                        <option value="examen">Examen</option>
+                    </optgroup>
+                    <optgroup label="Personal">
+                        <option value="diario">Diario</option>
+                        <option value="recordatorio">Recordatorio</option>
+                    </optgroup>
+                </select>
+
+                <label for="prioridad">Prioridad:</label>
+                <input list="prioridades" id="prioridad" name="prioridad">
+                <datalist id="prioridades">
+                    <option value="Alta">
+                    <option value="Media">
+                    <option value="Baja">
+                </datalist>
+
+                <button type="submit">Guardar Nota</button>
+                <button type="reset">Limpiar</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
