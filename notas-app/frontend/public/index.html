@@ -14,10 +14,14 @@
                 <legend>Información de la Nota</legend>
 
                 <label for="titulo">Título:</label>
-                <input type="text" id="titulo" name="titulo" required>
+                <div class="container2">
+                    <input type="text" id="titulo" name="titulo" required >
+                </div>
 
                 <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                <div class="container2">
+                    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                </div>
 
                 <label for="categoria">Categoría:</label>
                 <select id="categoria" name="categoria">
@@ -31,7 +35,7 @@
                     </optgroup>
                 </select>
 
-                <label for="prioridad">Prioridad:</label>
+                <labelel for="prioridad">Prioridad:</label>
                 <input list="prioridades" id="prioridad" name="prioridad">
                 <datalist id="prioridades">
                     <option value="Alta">

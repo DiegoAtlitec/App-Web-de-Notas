@@ -18,6 +18,15 @@ body {
     text-align: center;
 }
 
+.container2 {
+    display: flex;
+    justify-content: center;
+} 
+
+.container input{
+    width: 88%;
+}
+
 h2 {
     color: #ff6b81;
 }
