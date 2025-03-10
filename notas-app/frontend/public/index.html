@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App de Notas</title>
+    <title>App de Notas y Formulario de Registro</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 
                 <label for="titulo">Título:</label>
                 <div class="container2">
-                    <input type="text" id="titulo" name="titulo" required >
+                    <input type="text" id="titulo" name="titulo" required>
                 </div>
 
                 <label for="descripcion">Descripción:</label>
@@ -35,7 +35,7 @@
                     </optgroup>
                 </select>
 
-                <labelel for="prioridad">Prioridad:</label>
+                <label for="prioridad">Prioridad:</label>
                 <input list="prioridades" id="prioridad" name="prioridad">
                 <datalist id="prioridades">
                     <option value="Alta">
@@ -45,6 +45,46 @@
 
                 <button type="submit">Guardar Nota</button>
                 <button type="reset">Limpiar</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Formulario de Registro</h2>
+        <form action="http://localhost:3000/submit" method="POST">
+            <fieldset>
+                <legend>Datos Personales</legend>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required><br><br>
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required><br><br>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje"></textarea><br><br>
+
+                <label for="genero">Género:</label>
+                <select id="genero" name="genero">
+                    <optgroup label="Opciones">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </optgroup>
+                </select><br><br>
+
+                <label for="pais">País:</label>
+                <input list="paises" id="pais" name="pais">
+                <datalist id="paises">
+                    <option value="México">
+                    <option value="Argentina">
+                    <option value="España">
+                </datalist><br><br>
+
+                <button type="submit">Enviar</button>
             </fieldset>
         </form>
     </div>
